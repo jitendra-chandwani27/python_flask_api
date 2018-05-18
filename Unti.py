@@ -17,7 +17,7 @@ class FindCapital(Resource):
         #         capital = cur.fetchone()
         # except Error as e:
         #     print("Invalid country name")
-        conn = sqlite3.connect("/home/ranosys/python/project_api/database.db")
+        conn = sqlite3.connect("./database.db")
         with conn:
             cur=conn.cursor()
             cur.execute("SELECT Capital FROM findCapital WHERE Country = ?",(country,))
